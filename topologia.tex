@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{blindtext}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{cancel}
+\usepackage[left=2cm,top=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[all]{xy}
+\usepackage{cancel}
+\usepackage{pictexwd}
+\usepackage{parskip}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usepackage{vmargin}
+
+
+\DeclarePairedDelimiter\Floor\lfloor\rfloor
+\DeclarePairedDelimiter\Ceil\lceil\rceil
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definicion}[theorem]{Definición}
+\newtheorem{proposition}[theorem]{Proposición}
+\newtheorem{lemma}{Lema}[theorem]
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{example}{Ejemplo}[theorem]
+\newtheorem{corolario}{Corolario}[theorem]
+\newtheorem{observation}{Observación}[theorem]
+\newtheorem{properties}{Propiedades}[theorem]
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+
+
+\author{Pablo Pallàs}
+\title{Topología general}
+\setlength{\parindent}{10pt}
+
+
+\begin{document}
+\rmfamily
+\maketitle
+\tableofcontents
+\parindent= 0cm
+
+\section{Espacios topológicos}
+\subsection{Espacios topológicos}
+Sea $X$ un conjunto y $\mathcal{P}(X) = \lbrace A : A \subset X \rbrace$ el conjunto de sus partes, entonces:
+
+\begin{definition}Una \textbf{topología} sobre un conjunto $X$ es un subconjunto $\tau \subset \mathcal{P}(X)$ que satisface: 
+ \renewcommand{\theenumi}{\roman{enumi}} %Números arábigos
+\begin{enumerate}
+\item El conjunto vacío $\emptyset$ y el conjunto total $X$ pertenecen a $\tau$.
+\item La unión arbitraria de elementos de $\tau$ también pertenece a $\tau$.
+\item La intersección finita de elementos de $\tau$ también pertenece a $\tau$.
+\end{enumerate}
+El par $(X,\tau)$ lo denominaremos \textbf{espacio topológico} y a los elementos de $\tau$ los llamaremos \textbf{abiertos}.
+\end{definition}
+
+Es decir, podríamos decir que una topología es una colección de subconjuntos que contiene al vacío y al total, y que es cerrada para las uniones arbitrarias y las intersecciones finitas.
+
+\begin{example}Sea $X$ un conjunto arbitrario y $\tau_D = \mathcal{P}(X)$. Entonces, $\tau_D$ es una topología en $X$ ya que contiene a todos los subconjuntos de $X$, en particular al vacío y al total, es cerrada para las uniones arbitrarias y para las intersecciones finitas. A esta topología la denominaremos \textbf{topología discreta}, y al conjunto $X$ dotada de esta topología \textbf{espacio discreto}.
+\end{example}
+\begin{example}Sea $X$ un conjunto arbitrario y $\tau_I = \lbrace \emptyset, X \rbrace$. Entonces la colección $\tau_I$ es una topología sobre $X$: contiene al vacío y al total, la unión de ambos es $X \in \tau_I$ y la intersección es $\emptyset \in \tau_I$. Esta topología la denominaremos \textbf{topología indiscreta}, y es la topología más simple que puede tener un conjunto. A un conjunto $X$ dotado con esta topología lo denominaremos \textbf{espacio indiscreto}.
+\end{example}
+
+\begin{definition}Dos topologías $\tau_1, \tau_2$ sobre un conjunto $X$ se dicen \textbf{comparables} si $\tau_1 \subset \tau_2$ ó $\tau_2 \subset \tau_1$. Si $\tau_1 \subset \tau_2$ diremos que $\tau_2$ es más \textbf{fina} (tiene más abiertos) que $\tau_1$.
+\end{definition}
+
+\section{Aplicaciones continuas y homeomorfismos}
+\section{Separación y numerabilidad}
+\section{Espacios métricos}
+\section{Compacidad}
+\section{Conexión}
+
+\end{document}
