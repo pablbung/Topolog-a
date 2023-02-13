@@ -73,6 +73,21 @@ Es decir, podríamos decir que una topología es una colección de subconjuntos 
 \begin{definition}Dos topologías $\tau_1, \tau_2$ sobre un conjunto $X$ se dicen \textbf{comparables} si $\tau_1 \subset \tau_2$ ó $\tau_2 \subset \tau_1$. Si $\tau_1 \subset \tau_2$ diremos que $\tau_2$ es más \textbf{fina} (tiene más abiertos) que $\tau_1$.
 \end{definition}
 
+Notar que si $\tau_1$ y $\tau_2$ son dos topologías sobre $X$ es fácil ver que $\tau_1 \cap \tau_2$ es una topología sobre $X$. En general, la unión $\tau_1 \cup \tau_2$ no es necesariamente una topología.
+
+\begin{definition}Sea $(X, \tau)$ un espacio topológico, un conjunto $\mathfrak{B} \subset \tau$ de abiertos se dice \textbf{base} de $\tau$ si todo elemento de $\tau$ es unión de elementos de $\mathfrak{B}$.
+\end{definition}
+
+\begin{example}Veamos algunos ejemplos:
+\begin{enumerate}
+\item La propia topología $\tau$ es base de sí misma.
+\item Es claro que $\mathfrak{B} = \lbrace \lbrace x \rbrace : x \in X \rbrace$ es base de la topología discreta $\tau_D$ sobre $	X$.
+\item El conjunto de intervalor $\mathfrak{B}_U = \lbrace (a,b):a,b \in \mathbb{R} \rbrace$ es una base para la topología usual sobre $\mathbb{R}$, $\tau_U.$
+\end{enumerate}
+\end{example}
+
+\begin{proposition}Sea $(X, \tau)$ un espacio topológico, entonces $\mathfrak{B} \subset \tau$ es una base si y sólo si para todo $U \in \tau$ y todo $x \in U$ existe $B \in \mathfrak{B}$ tal que $x \in B \subset U$.
+\end{proposition}
 \section{Aplicaciones continuas y homeomorfismos}
 \section{Separación y numerabilidad}
 \section{Espacios métricos}
